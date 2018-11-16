@@ -13,7 +13,7 @@ Etel *etel_beolvas(char *kerdes, int *db){
     printf("%s",kerdes);
     int etelek_db = 0; //feltételezzük hogy először nulla db ételünk és és majd ezt mindig növeljük eggyel
 
-    Etel *etelek; //ez egy etelek lista
+    Etel *etelek = NULL; //ez egy etelek lista
 
     bool vege = false;
     int sorszam = 1;
