@@ -5,6 +5,8 @@
 #ifndef HF_FELHASZNALO_MOD_H
 #define HF_FELHASZNALO_MOD_H
 
-void felhasznalo_mod();
+#include "strukturak.h"
+
+void felhasznalo_mod(EGY_DARAB_Asztal *asztaltomb, Menu menu);
 
 #endif //HF_FELHASZNALO_MOD_H

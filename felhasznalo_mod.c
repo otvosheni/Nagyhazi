@@ -5,8 +5,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "felhasznalo_mod.h"
+#include "asztalfoglalas.h"
 
-void felhasznalo_mod(){
+void felhasznalo_mod(EGY_DARAB_Asztal *asztaltomb, Menu menu){
     printf("Felhasználó mód\n\n");
 
     int szam;
@@ -22,7 +23,7 @@ void felhasznalo_mod(){
     //system("cls");
 
     if(szam == 1);
-        //asztalfoglalas();
+        asztalfoglalas();
     if(szam == 2);
         //rendeles_megadasa();
     if(szam == 3);

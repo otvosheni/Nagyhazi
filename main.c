@@ -18,7 +18,9 @@ int main(void) {
     SetConsoleOutputCP(65001);
 #endif
 
-    EGY_DARAB_Asztal* asztal_lista;
+    EGY_DARAB_Asztal* asztal_lista = (EGY_DARAB_Asztal*) malloc(sizeof(EGY_DARAB_Asztal));
+    Menu menu_lista;
+    bool bevanolvasva = false;
     while (true) {
         printf("Heni étterme");
         printf("\n\n");
@@ -34,11 +36,16 @@ int main(void) {
             printf("Érvénytelen a bemenet, kérem próbálja újra! ");
         //system("cls"); //only on windows
 
-        if (szam == 1)
-            //TODO REMOVE NULL!!!
-            beallitas_mod(&asztal_lista, NULL);
-        if (szam == 2)
-            felhasznalo_mod();
+        if (szam == 1){
+            beallitas_mod(&asztal_lista, &menu_lista);
+            bevanolvasva = true;
+        }
+        if (szam == 2) {
+            if (bevanolvasva)
+                felhasznalo_mod(asztal_lista, menu_lista);
+            else
+                printf("Nincsenek bolvasva az adatok. Kérem először olvassa be az adatokat a beállítás módban.\n");
+        }
         if (szam == 3)
             return 0;
     }

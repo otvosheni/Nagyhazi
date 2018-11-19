@@ -7,6 +7,7 @@
 
 #include "strukturak.h"
 
-void beallitas_mod(EGY_DARAB_Asztal** asztal, Etel*** etelek);
+void fajlbol_olvasas(EGY_DARAB_Asztal** asztal, Menu* etel);
+void beallitas_mod(EGY_DARAB_Asztal** asztal, Menu* etelek);
 
 #endif //HF_BEALLITAS_MOD_H
