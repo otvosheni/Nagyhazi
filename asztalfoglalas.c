@@ -13,13 +13,19 @@ typedef struct Foglalas{
 
 void foglalasok_listazasa(){
     FILE *file = fopen("asztalfoglalasok.dat", "rt");
-    Foglalas egy_foglalas;
-    while (fscanf(file, "%[^;];%s;%s\n", egy_foglalas.nev, egy_foglalas.datum, egy_foglalas.idopont)!= EOF){
-        printf("Foglalás neve, dátuma, időpontja: %s,%s,%s\n", egy_foglalas.nev, egy_foglalas.datum,egy_foglalas.idopont);
+    if(!file) {
+        printf("Nincsenek foglalt asztalok\n");
+        return;
+    }
+
+    char sor[64];
+    while (fscanf(file, "%[^\n]\n", sor) != EOF){
+        char nev[64], datum[64], ido[64];
+        sscanf(sor,"%[^;];%[^;];%[^;]",nev,datum,ido);
+        printf("Foglalás neve, dátuma, időpontja: %s,%s,%s\n", nev, datum, ido);
     }
     fclose(file);
 }
-
 
 void foglalas_megadasa(){
 
