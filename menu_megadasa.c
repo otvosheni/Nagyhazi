@@ -52,17 +52,43 @@ void mentes_fajlba(FILE *file, char *tipus, int db, Etel *lista){
         fprintf(file, "%s;%d\n", kaja.neve, kaja.ara);
     }
 }
+Etel *menutipus_beolvas(FILE *file){
+    int db;
+    char tipus[64];
+    fscanf(file, "%[^;];%d\n", tipus, &db);
+    Etel * etelek = (Etel*) malloc(sizeof(Etel)*db);
+    for(int i=0; i<db; i++){
+        Etel *kaja = &etelek[i];
+        fscanf(file, "%[^;];%d\n",kaja->neve, &kaja->ara );
+    }
+    return etelek;
+}
 
-Menu* menu_beolvas() {
+Menu menu_beolvas() {
     FILE *file = fopen ("menu.dat", "rt");
     if (!file) {
         printf("Nem tudom beolvasni");
-        return NULL;
-    }
 
+        //TODO Add not found handling
+        //return NULL;
+    }
+    Etel * eloetelek = menutipus_beolvas(file);
+    Etel * foetelek = menutipus_beolvas(file);
+    Etel * desszertek= menutipus_beolvas(file);
+    Etel * italok = menutipus_beolvas(file);
+
+    fclose(file);
+
+    Menu menu;
+    menu.eloetel = eloetelek;
+    menu.foetel = foetelek;
+    menu.desszert = desszertek;
+    menu.ital = italok;
+
+    return menu;
 }
 
-void menu_megadasa(){
+Menu menu_megadasa(){
     printf("Menü megadása:\n\n");
 
     int eloetelek_db;
@@ -84,12 +110,12 @@ void menu_megadasa(){
 
     fclose(file);
 
-    int szam;
-    printf("Ha végzett, akkor nyomja meg a 3-as gombot, hogy visszamehessen a főmenübe\n");
-    scanf("%d", &szam);
-    //system("cls");
+    Menu menu;
+    menu.eloetel = eloetelek;
+    menu.foetel = foetelek;
+    menu.desszert = desszertek;
+    menu.ital = italok;
 
-    if (szam == 3)
-        return;
+    return menu;
 
 }

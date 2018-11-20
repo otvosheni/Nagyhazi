@@ -8,9 +8,9 @@
 #include <stdio.h>
 #include "strukturak.h"
 
-void menu_megadasa();
+Menu menu_megadasa();
 Etel *etel_beolvas(char *kerdes, int *db);
 void mentes_fajlba(FILE *file, char *tipus, int db, Etel *lista);
-Menu* menu_beolvas();
+Menu menu_beolvas();
 
 #endif //HF_MENU_MEGADASA_H

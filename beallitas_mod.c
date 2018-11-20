@@ -14,7 +14,7 @@
 #include <windows.h>
 
 #endif
-void fajlbol_olvasas(EGY_DARAB_Asztal** asztal, Etel*** etel) {
+void fajlbol_olvasas(EGY_DARAB_Asztal** asztal, Menu* etel) {
     int szam;
     printf("1. Asztalok beolvasása\n");
     printf("2. Menü beolvasása\n");
@@ -25,17 +25,16 @@ void fajlbol_olvasas(EGY_DARAB_Asztal** asztal, Etel*** etel) {
     if(szam < 1 || szam > 3)
         printf("Érvénytelen a bemenet, kérem próbálja újra! ");
 
-    EGY_DARAB_Asztal* a;
     if(szam == 1)
         *asztal = asztalok_beolvas();
     if(szam == 2)
-       ;// menu_beolvas();
+        *etel = menu_beolvas();
     if(szam == 3)
         return;
 }
 
 
-void beallitas_mod(EGY_DARAB_Asztal** asztal, Etel*** etelek) {
+void beallitas_mod(EGY_DARAB_Asztal** asztal, Menu* etelek) {
     printf("Beállítás mód\n\n");
 
     int szam;
@@ -47,16 +46,13 @@ void beallitas_mod(EGY_DARAB_Asztal** asztal, Etel*** etelek) {
     scanf("%d", &szam);
     //system("cls"); // only on windows
 
-    if (szam != 1 && szam != 2 && szam != 3)
+    if (szam < 1 || szam > 3)
         printf("Érvénytelen a bemenet, kérem próbálja újra!");
 
-    if (szam == 1) {
-        EGY_DARAB_Asztal* a;
-        a = asztalok_megadasa();
-        *asztal = a;
-    }
+    if (szam == 1)
+        *asztal = asztalok_megadasa();
     if (szam == 2)
-        menu_megadasa();
+        *etelek = menu_megadasa();
     if(szam == 3)
         fajlbol_olvasas(asztal,etelek);
     if (szam == 4)
