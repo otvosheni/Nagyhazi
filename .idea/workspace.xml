@@ -12,10 +12,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a9cb63b-08b1-4528-af68-99ffce64c568" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/asztalfoglalas.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asztalfoglalas.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rendeles_megadasa.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rendeles_megadasa.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/szamla_kiallitasa.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/szamla_kiallitasa.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HF.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asztalfoglalas.c" beforeDir="false" afterPath="$PROJECT_DIR$/asztalfoglalas.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asztalfoglalas.h" beforeDir="false" afterPath="$PROJECT_DIR$/asztalfoglalas.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asztalok_megadasa.c" beforeDir="false" afterPath="$PROJECT_DIR$/asztalok_megadasa.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asztalok_megadasa.h" beforeDir="false" afterPath="$PROJECT_DIR$/asztalok_megadasa.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beallitas_mod.c" beforeDir="false" afterPath="$PROJECT_DIR$/beallitas_mod.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beallitas_mod.h" beforeDir="false" afterPath="$PROJECT_DIR$/beallitas_mod.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/felhasznalo_mod.c" beforeDir="false" afterPath="$PROJECT_DIR$/felhasznalo_mod.c" afterDir="false" />
@@ -23,6 +30,7 @@
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu_megadasa.c" beforeDir="false" afterPath="$PROJECT_DIR$/menu_megadasa.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu_megadasa.h" beforeDir="false" afterPath="$PROJECT_DIR$/menu_megadasa.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strukturak.h" beforeDir="false" afterPath="$PROJECT_DIR$/strukturak.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,41 +44,43 @@
     <session id="1302602328">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.5" value="5" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="2" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="8" />
+          <entry key="project.open.time.8" value="4" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="HF (disassembly)" value="10" />
-          <entry key="c" value="17" />
-          <entry key="dat" value="1" />
-          <entry key="h" value="14" />
+          <entry key="HF (disassembly)" value="13" />
+          <entry key="c" value="55" />
+          <entry key="dat" value="2" />
+          <entry key="h" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Disassembly" value="10" />
-          <entry key="ObjectiveC" value="31" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Disassembly" value="13" />
+          <entry key="ObjectiveC" value="87" />
+          <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="c" value="7523" />
-          <entry key="h" value="430" />
+          <entry key="c" value="12098" />
+          <entry key="h" value="702" />
           <entry key="m" value="17" />
+          <entry key="txt" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="7970" />
+          <entry key="ObjectiveC" value="12817" />
+          <entry key="PLAIN_TEXT" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages" />
@@ -80,12 +90,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/beallitas_mod.c">
+        <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+            <state relative-caret-position="208">
+              <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
               <folding>
-                <element signature="e#44#62#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,20 +104,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/felhasznalo_mod.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-              <folding>
-                <element signature="e#44#62#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/asztalfoglalas.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="476">
+              <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
               <folding>
                 <element signature="e#44#62#0" expanded="true" />
               </folding>
@@ -118,26 +116,50 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/asztalfoglalas.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="153">
+              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/felhasznalo_mod.h">
+        <entry file="file://$PROJECT_DIR$/asztalfoglalas.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="60" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="60" />
+            <state relative-caret-position="952">
+              <caret line="56" column="79" selection-start-line="56" selection-start-column="79" selection-end-line="56" selection-end-column="79" />
+              <folding>
+                <element signature="e#44#62#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rendeles_megadasa.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/beallitas_mod.h">
+        <entry file="file://$PROJECT_DIR$/rendeles_megadasa.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
+            <state>
+              <caret column="2" selection-start-column="2" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/szamla_kiallitasa.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="497">
+              <caret line="36" column="45" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+              <folding>
+                <element signature="e#44#62#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -153,17 +175,21 @@
         <option value="$PROJECT_DIR$/go.h" />
         <option value="$PROJECT_DIR$/go.c" />
         <option value="$PROJECT_DIR$/asztalok_megadasa.h" />
-        <option value="$PROJECT_DIR$/asztalok_megadasa.c" />
-        <option value="$PROJECT_DIR$/strukturak.h" />
-        <option value="$PROJECT_DIR$/menu_megadasa.h" />
-        <option value="$PROJECT_DIR$/menu_megadasa.c" />
+        <option value="$PROJECT_DIR$/beallitas_mod.h" />
         <option value="$PROJECT_DIR$/felhasznalo_mod.h" />
+        <option value="$PROJECT_DIR$/szamla_kiallitasa.h" />
         <option value="$PROJECT_DIR$/felhasznalo_mod.c" />
         <option value="$PROJECT_DIR$/main.c" />
-        <option value="$PROJECT_DIR$/beallitas_mod.h" />
+        <option value="$PROJECT_DIR$/menu_megadasa.h" />
+        <option value="$PROJECT_DIR$/asztalok_megadasa.c" />
+        <option value="$PROJECT_DIR$/strukturak.h" />
         <option value="$PROJECT_DIR$/beallitas_mod.c" />
+        <option value="$PROJECT_DIR$/menu_megadasa.c" />
         <option value="$PROJECT_DIR$/asztalfoglalas.h" />
         <option value="$PROJECT_DIR$/asztalfoglalas.c" />
+        <option value="$PROJECT_DIR$/rendeles_megadasa.h" />
+        <option value="$PROJECT_DIR$/szamla_kiallitasa.c" />
+        <option value="$PROJECT_DIR$/rendeles_megadasa.c" />
       </list>
     </option>
   </component>
@@ -175,9 +201,7 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="15" />
-    <option name="y" value="30" />
-    <option name="width" value="1890" />
+    <option name="width" value="1389" />
     <option name="height" value="930" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -186,6 +210,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,10 +223,10 @@
         </subPane>
         <option name="show-excluded-files" value="false" />
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="main.c&#9;FILE&#9;file://C:/prog_clion/HF/main.c" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -255,12 +280,30 @@
       <workItem from="1542274852256" duration="3763000" />
       <workItem from="1542374130288" duration="4178000" />
       <workItem from="1542490381508" duration="9262000" />
-      <workItem from="1542642523104" duration="814000" />
+      <workItem from="1542642523104" duration="914000" />
+      <workItem from="1542754020350" duration="1909000" />
+      <workItem from="1542879222610" duration="11982000" />
+      <workItem from="1542920110428" duration="803000" />
+      <workItem from="1542958418687" duration="909000" />
+      <workItem from="1542980487630" duration="6968000" />
+      <workItem from="1543005841803" duration="4287000" />
+      <workItem from="1543058425445" duration="18411000" />
+      <workItem from="1543171428958" duration="615000" />
+      <workItem from="1543270013379" duration="19000" />
+      <workItem from="1543482895698" duration="1301000" />
     </task>
+    <task id="LOCAL-00001" summary="Res. list not working">
+      <created>1542643409398</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1542643409398</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46433000" />
+    <option name="totallyTimeSpent" value="93737000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -276,17 +319,17 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.16518219" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.78469753" visible="true" weight="0.19433199" />
+      <window_info id="Structure" order="2" sideWeight="0.2153025" side_tool="true" visible="true" weight="0.19433199" />
       <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="4" weight="0.3291815" />
+      <window_info anchor="bottom" id="Messages" order="4" visible="true" weight="0.19928825" />
       <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.3291815" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.0" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.25622776" />
-      <window_info active="true" anchor="bottom" id="Debug" order="8" visible="true" weight="0.39679715" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.42704627" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="CMake" order="10" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -325,36 +368,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Res. list not working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Res. list not working" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/menu_megadasa.c</url>
-          <line>118</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/menu_megadasa.c</url>
-          <line>48</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/menu_megadasa.c</url>
-          <line>55</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/menu_megadasa.c</url>
-          <line>63</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/asztalfoglalas.c</url>
-          <line>16</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="HF">
         <watch expression="asztal_lista[2]" language="ObjectiveC" />
@@ -393,17 +411,41 @@
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/asztal.dat">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/strukturak.h">
+    <entry file="file://$PROJECT_DIR$/felhasznalo_mod.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+        <state relative-caret-position="153">
+          <caret line="9" column="61" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/asztalok_megadasa.c">
+    <entry file="file://$PROJECT_DIR$/szamla_kiallitasa.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="153">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../main.c">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu_megadasa.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/strukturak.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beallitas_mod.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -414,64 +456,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/menu_megadasa.h">
+    <entry file="file://$PROJECT_DIR$/asztalok_megadasa.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="e#99#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/menu_megadasa.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="110" column="17" lean-forward="true" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
-          <folding>
-            <element signature="e#44#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="114" selection-start-line="46" selection-start-column="114" selection-end-line="46" selection-end-column="114" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-12">
+          <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/beallitas_mod.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
-          <folding>
-            <element signature="e#44#62#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="328">
+          <caret line="37" column="18" lean-forward="true" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/felhasznalo_mod.h">
+    <entry file="file://$PROJECT_DIR$/menu_megadasa.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="60" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/beallitas_mod.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
+        <state relative-caret-position="-165">
+          <caret line="104" column="57" lean-forward="true" selection-start-line="104" selection-start-column="57" selection-end-line="104" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/felhasznalo_mod.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        <state relative-caret-position="476">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
           <folding>
             <element signature="e#44#62#0" expanded="true" />
           </folding>
@@ -480,18 +489,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/asztalfoglalas.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="153">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/asztalfoglalas.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="952">
+          <caret line="56" column="79" selection-start-line="56" selection-start-column="79" selection-end-line="56" selection-end-column="79" />
           <folding>
             <element signature="e#44#62#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rendeles_megadasa.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/szamla_kiallitasa.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="36" column="45" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+          <folding>
+            <element signature="e#44#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rendeles_megadasa.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
         </state>
       </provider>
     </entry>

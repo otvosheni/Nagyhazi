@@ -7,6 +7,6 @@
 
 #include "strukturak.h"
 
-void felhasznalo_mod(EGY_DARAB_Asztal *asztaltomb, Menu menu);
+void felhasznalo_mod(egy_Asztal *asztaltomb,int *hossz, Menu menu);
 
 #endif //HF_FELHASZNALO_MOD_H

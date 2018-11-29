@@ -6,42 +6,13 @@
 #include "asztalfoglalas.h"
 
 typedef struct Foglalas{
-    char datum[11];
+    char datum[12];
     char nev[64];
     char idopont[6];
 }Foglalas;
 
-void foglalasok_listazasa(){
-    FILE *file = fopen("asztalfoglalasok.dat", "rt");
-    Foglalas egy_foglalas;
-    while (fscanf(file, "%[^;];%s;%s\n", egy_foglalas.nev, egy_foglalas.datum, egy_foglalas.idopont)!= EOF){
-        printf("Foglalás neve, dátuma, időpontja: %s,%s,%s\n", egy_foglalas.nev, egy_foglalas.datum,egy_foglalas.idopont);
-    }
-    fclose(file);
-}
-
-
-void foglalas_megadasa(){
-
-    Foglalas egy_foglalas;
-    printf("Foglalási adatok: \n");
-    printf("Milyen névre szól a foglalás:");
-    scanf("\n%[^\n]", egy_foglalas.nev);
-    printf("Dátuma:");
-    scanf("%s", egy_foglalas.datum); //datumot szokozok nélkul kell megadni
-    printf("Mikorra:");
-    scanf("%s", egy_foglalas.idopont);
-
-    FILE *file = fopen ("asztalfoglalasok.dat", "awt");
-    if(file)
-        fprintf(file, "%s;%s;%s\n", egy_foglalas.nev, egy_foglalas.datum, egy_foglalas.idopont);
-    else
-        printf("Nem lehet elmenteni basszameg");
-    fclose(file);
-}
-
 void asztalfoglalas(){
-    printf("Asztalfoglalások\n\n");
+    printf("\nAsztalfoglalások\n\n");
 
     int szam;
     printf("1. Új foglalás megadása\n");
@@ -50,7 +21,7 @@ void asztalfoglalas(){
     printf("Kérem válasszon ezen menüpontok közül:");
 
     scanf("%d", &szam);
-    if(szam < 1 && szam > 3)
+    if(szam < 1 || szam > 3)
         printf("Érvénytelen a bemenet, kérem próbálja újra!");
 
     if (szam == 1)
@@ -62,4 +33,40 @@ void asztalfoglalas(){
 
 }
 
+void foglalas_megadasa(){
+    printf("\n");
 
+    Foglalas egy_foglalas;
+    printf("Foglalási adatok: \n");
+    printf("Milyen névre szól a foglalás:");
+    scanf("\n%[^\n]", egy_foglalas.nev);
+    printf("Dátuma:");
+    scanf("%s", egy_foglalas.datum); //datumot szokozok nélkul kell megadni
+    printf("Mikorra:");
+    scanf("%s", egy_foglalas.idopont);
+
+    FILE *file = fopen ("asztalfoglalasok.dat", "awt");         //hozzáírja az eddigi asztalfoglalásokhoz
+    if(file)
+        fprintf(file, "%s;%s;%s\n", egy_foglalas.nev, egy_foglalas.datum, egy_foglalas.idopont);
+    else
+        printf("Nem lehet beolvasni");
+    fclose(file);
+}
+
+void foglalasok_listazasa(){
+    FILE *file = fopen("asztalfoglalasok.dat", "rt");       //fájlból beolvasás
+    if(!file) {
+        printf("Nincsenek foglalt asztalok\n");
+        return;
+    }
+    char sor[64];
+    printf("\n");
+    printf(" %17s | %11s  | %8s|\n", "Foglalás neve", "Dátum", "Időpont");
+    printf("-------------------------------------------\n");
+    while (fscanf(file, "%[^\n]\n", sor) != EOF){
+        char nev[64], datum[64], ido[64];
+        sscanf(sor,"%[^;];%[^;];%[^;]",nev,datum,ido);
+        printf("%17s | %11s | %6s |\n",nev, datum, ido);
+    }
+    fclose(file);
+}

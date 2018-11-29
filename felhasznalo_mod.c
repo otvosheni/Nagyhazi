@@ -6,9 +6,11 @@
 #include <stdlib.h>
 #include "felhasznalo_mod.h"
 #include "asztalfoglalas.h"
+#include "rendeles_megadasa.h"
+#include "szamla_kiallitasa.h"
 
-void felhasznalo_mod(EGY_DARAB_Asztal *asztaltomb, Menu menu){
-    printf("Felhasználó mód\n\n");
+void felhasznalo_mod(egy_Asztal *asztaltomb,int *hossz, Menu menu){
+    printf("\nFelhasználó mód\n\n");
 
     int szam;
     printf("1. Asztalfoglalás\n");
@@ -20,14 +22,13 @@ void felhasznalo_mod(EGY_DARAB_Asztal *asztaltomb, Menu menu){
 
     if(szam < 1 || szam >4)
         printf("Érvénytelen a bemenet, kérem próbálja újra");
-    //system("cls");
 
-    if(szam == 1);
+    if(szam == 1)
         asztalfoglalas();
-    if(szam == 2);
-        //rendeles_megadasa();
-    if(szam == 3);
-        //szamla_kiallitasa();
+    if(szam == 2)
+        egy_rendeles_megadasa(asztaltomb,hossz,menu);
+    if(szam == 3)
+        szamla_kiallitasa(asztaltomb, hossz);
     if(szam == 4)
         return;
 }

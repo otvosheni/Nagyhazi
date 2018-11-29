@@ -7,7 +7,7 @@
 
 #include "strukturak.h"
 
-EGY_DARAB_Asztal *asztalok_megadasa();
-EGY_DARAB_Asztal *asztalok_beolvas();
+egy_Asztal *asztalok_megadasa(int *hossz);
+egy_Asztal *asztalok_beolvas(int *hossz);
 
 #endif //HF_ASZTALOK_MEGADASA_H

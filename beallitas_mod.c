@@ -14,8 +14,34 @@
 #include <windows.h>
 
 #endif
-void fajlbol_olvasas(EGY_DARAB_Asztal** asztal, Menu* etel) {
+
+void beallitas_mod(egy_Asztal** asztaltomb,int *hossz, Menu* menutomb) {
+    printf("\nBeállítás mód\n\n");
+
     int szam;
+    printf("1. Asztalok megadása\n");
+    printf("2. Menü megadása\n");
+    printf("3. Fájlból beolvasás\n");
+    printf("4. Visszalépés a főmenübe\n");
+    printf("Kérem válasszon ezen menüpontok közül: ");
+    scanf("%d", &szam);
+
+    if (szam < 1 || szam > 4)
+        printf("Érvénytelen a bemenet, kérem próbálja újra!");
+
+    if (szam == 1)
+        *asztaltomb = asztalok_megadasa(hossz);
+    if (szam == 2)
+        *menutomb = menu_megadasa();
+    if(szam == 3)
+        fajlbol_olvasas(asztaltomb,hossz,menutomb);
+    if (szam == 4)
+        return;
+}
+
+void fajlbol_olvasas(egy_Asztal** asztaltomb,int *hossz, Menu* menutomb) {
+    int szam;
+    printf("\n");
     printf("1. Asztalok beolvasása\n");
     printf("2. Menü beolvasása\n");
     printf("3. Visszalépés\n");
@@ -26,35 +52,9 @@ void fajlbol_olvasas(EGY_DARAB_Asztal** asztal, Menu* etel) {
         printf("Érvénytelen a bemenet, kérem próbálja újra! ");
 
     if(szam == 1)
-        *asztal = asztalok_beolvas();
+        *asztaltomb = asztalok_beolvas(hossz);
     if(szam == 2)
-        *etel = menu_beolvas();
+        *menutomb = menu_beolvas();
     if(szam == 3)
-        return;
-}
-
-
-void beallitas_mod(EGY_DARAB_Asztal** asztal, Menu* etelek) {
-    printf("Beállítás mód\n\n");
-
-    int szam;
-    printf("1. Asztalok megadása\n");
-    printf("2. Menü megadása\n");
-    printf("3. Fájlból beolvasás\n");
-    printf("4. Visszalépés a főmenübe\n");
-    printf("Kérem válasszon ezen menüpontok közül: ");
-    scanf("%d", &szam);
-    //system("cls"); // only on windows
-
-    if (szam < 1 || szam > 3)
-        printf("Érvénytelen a bemenet, kérem próbálja újra!");
-
-    if (szam == 1)
-        *asztal = asztalok_megadasa();
-    if (szam == 2)
-        *etelek = menu_megadasa();
-    if(szam == 3)
-        fajlbol_olvasas(asztal,etelek);
-    if (szam == 4)
         return;
 }

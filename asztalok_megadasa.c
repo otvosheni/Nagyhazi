@@ -7,15 +7,17 @@
 #include "asztalok_megadasa.h"
 #include "strukturak.h"
 
-EGY_DARAB_Asztal *asztalok_megadasa() {
-    printf("Asztalok megadása: \n\n");
+egy_Asztal *asztalok_megadasa(int *hossz) {
+    printf("\nAsztalok megadása: \n\n");
 
     int db;
     printf("Hány asztal van az étteremben:");
     scanf("%d", &db);
 
-    EGY_DARAB_Asztal *asztalok = (EGY_DARAB_Asztal *) malloc(sizeof(EGY_DARAB_Asztal) * db);
+    *hossz = db;
 
+    egy_Asztal *asztaltomb = (egy_Asztal *) malloc(sizeof(egy_Asztal) * db);
+            //dinamikus tömb lefoglalása, amelyben az asztalok adatai vannak
     for (int i = 0; i < db; i++) {
         int ferohelyek;
         char elhelyezkedes[64];
@@ -24,25 +26,26 @@ EGY_DARAB_Asztal *asztalok_megadasa() {
         printf("Hol van a(z) %d. asztal: ", i + 1);
         scanf("\n%[^\n]", elhelyezkedes); //addig olvas be ameddig nincs sorvég jel
 
-        EGY_DARAB_Asztal asztal;
+        egy_Asztal asztal;
         asztal.szama = i + 1;
         asztal.ferohelye = ferohelyek;
+        asztal.rendelese = NULL;        //ez majd a rendeléseknél fontos
         strcpy(asztal.helye, elhelyezkedes);
-        asztalok[i] = asztal;
+        asztaltomb[i] = asztal;         //itt adom át az egyes asztalokat a tömbnek
     }
 
-    FILE *file = fopen("asztal.dat", "wt");
+    FILE *file = fopen("asztal.dat", "wt");        //fájlba kiírás
     fprintf(file, "%d\n", db);
     for (int i = 0; i < db; i++) {
-        EGY_DARAB_Asztal a = asztalok[i];
+        egy_Asztal a = asztaltomb[i];
         fprintf(file, "%d;%s\n", a.ferohelye, a.helye);
     }
     fclose(file);
 
-    return asztalok;
+    return asztaltomb;
 }
 
-EGY_DARAB_Asztal *asztalok_beolvas(){
+egy_Asztal *asztalok_beolvas(int *hossz){        //fajlbol beolvasas
     int db;
     FILE *file = fopen("asztal.dat", "rt");
     if(!file) {
@@ -51,12 +54,15 @@ EGY_DARAB_Asztal *asztalok_beolvas(){
     }
     fscanf(file, "%d\n", &db);
 
-    EGY_DARAB_Asztal *asztalok = (EGY_DARAB_Asztal *) malloc(sizeof(EGY_DARAB_Asztal) * db);
+    *hossz = db;
+
+    egy_Asztal *asztaltomb = (egy_Asztal *) malloc(sizeof(egy_Asztal) * db);
 
     for(int i=0; i < db; i++){
-        EGY_DARAB_Asztal* a = &asztalok[i];
+        egy_Asztal* a = &asztaltomb[i];
         a->szama = i + 1;
+        a->rendelese = NULL;
         fscanf(file, "%d;%s\n", &(a->ferohelye), a->helye);
     }
-    return asztalok;
+    return asztaltomb;
 }
