@@ -33,21 +33,33 @@ int main(void) {
         printf("Kérem válasszon ezen menüpontok közül: ");
         scanf("%d", &szam);
 
-        if (szam < 1 || szam > 3)
-            printf("Érvénytelen a bemenet, kérem próbálja újra! ");
+        switch(szam){
+            case 1: beallitas_mod(&asztaltomb,&hossz,&menu_lista);
+                bevanolvasva = true;
+                break;
+            case 2:if (bevanolvasva)
+                    felhasznalo_mod(asztaltomb, &hossz,menu_lista);
+                else
+                    printf("Nincsenek beolvasva az adatok. Kérem először olvassa be az adatokat a beállítás módban.\n");
+                break;
+            case 3: break;
+            default: printf("Érvénytelen a bemenet, kérem próbálja újra! ");
+        }
+        //if (szam < 1 || szam > 3)
+           // printf("Érvénytelen a bemenet, kérem próbálja újra! ");
 
-        if (szam == 1){
-            beallitas_mod(&asztaltomb,&hossz,&menu_lista);
-            bevanolvasva = true;
-        }
-        if (szam == 2) {
-            if (bevanolvasva)
-                felhasznalo_mod(asztaltomb, &hossz,menu_lista);
-            else
-                printf("Nincsenek beolvasva az adatok. Kérem először olvassa be az adatokat a beállítás módban.\n");
-        }
-        if (szam == 3)
-          return 0;
+        //if (szam == 1){
+           // beallitas_mod(&asztaltomb,&hossz,&menu_lista);
+           // bevanolvasva = true;
+        //}
+        //if (szam == 2) {
+          //  if (bevanolvasva)
+            //    felhasznalo_mod(asztaltomb, &hossz,menu_lista);
+           // else
+             //   printf("Nincsenek beolvasva az adatok. Kérem először olvassa be az adatokat a beállítás módban.\n");
+        //}
+        //if (szam == 3)
+        //  return 0;
     }
 
 }

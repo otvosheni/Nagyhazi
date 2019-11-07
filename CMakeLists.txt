@@ -1,6 +1,24 @@
 cmake_minimum_required(VERSION 3.12)
-project(HF C)
+project(dfjkhalf C)
 
-set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD 11)
 
-add_executable(HF main.c beallitas_mod.c beallitas_mod.h asztalok_megadasa.c asztalok_megadasa.h menu_megadasa.c menu_megadasa.h strukturak.h felhasznalo_mod.c felhasznalo_mod.h asztalfoglalas.c asztalfoglalas.h rendeles_megadasa.c rendeles_megadasa.h szamla_kiallitasa.c szamla_kiallitasa.h)
+include_directories(.)
+
+add_executable(dfjkhalf
+        asztalfoglalas.c
+        asztalfoglalas.h
+        asztalok_megadasa.c
+        asztalok_megadasa.h
+        beallitas_mod.c
+        beallitas_mod.h
+        felhasznalo_mod.c
+        felhasznalo_mod.h
+        main.c
+        menu_megadasa.c
+        menu_megadasa.h
+        rendeles_megadasa.c
+        rendeles_megadasa.h
+        strukturak.h
+        szamla_kiallitasa.c
+        szamla_kiallitasa.h)

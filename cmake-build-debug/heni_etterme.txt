@@ -1,0 +1,43 @@
+HF felipetes - Heni étterme!
+
+meg kellene oldani h szokozt is be tudjon olvasni!
++ a fajlba mentett adatokat vissza is tudja tolteni azokat
+*.obj, *.exe, thumbs.db stb. ezeket a folosleges fajlokat a zip fajl nem tartalmazhatja!!!!
+
+
+1. beállítas mod
+	- asztalok megadasa
+	- menu beirasa
+
+2. felhasználo mod
+	- foglalasok
+	- rendelesek
+	- szamla
+
+strukturak:
+- asztal
+	szama
+	ferohelye
+	(helye)
+	rendeles
+
+- etel
+	nev
+	ar
+
+- menu
+	dinamikus tomb - eloetel
+	foetel
+	desszert
+	italok
+
+- rendeles
+	egy dinamikus tombnyi kaja
+
+-foglalas
+	nev
+	asztal szama
+	szemelyek szama
+	idopont
+	
+	
